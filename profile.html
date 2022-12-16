@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lamg="ja">
+<head>
+    <meta charaset="utf-8">
+    <title>自炊大学生の料理レシピ</title>
+
+ 
+</head>
+<!--キャンバスを使った箇所。3秒後にページ移動が行われる-->
+<body>
+    <canvas id="cvs" width="800px" height="500px" style="background-color:#000;"></canvas>
+    <script>
+        var canvas = document.getElementById("cvs");//キャンパスつくりまーす
+        var ctx = canvas.getContext("2d");
+        var imgCnt = 25;  // 描画する画像の数
+        var aryImg = [];  // 画像の情報を格納
+        var cvsw = 800;   // canvasタグに指定したwidth
+        var cvsh = 500;   // canvasタグに指定したheight
+        var imgBaseSizeW = 15;    // 画像の基本サイズ横幅
+        var imgBaseSizeH = 18.5;  // 画像の基本サイズ立幅
+
+        // 画像の読み込み
+        var img = new Image();
+        img.src = "img/sakura.png";
+        img.onload = flow_start;
+
+        // 画像のパラメーターを設定
+        function setImagas() {
+            for (var i = 0; i < imgCnt; i++) {//画像数が25個になるまで実行するよー
+                aryImg.push({
+                    "posx": Math.random() * cvsw,     // 初期表示位置x(xの位置はランダムで表示するよ)
+                    "posy": Math.random() * cvsh,     // 初期表示位置y(ｙの位置はランダムで表示するよ)
+                    "sizew": imgBaseSizeW,          // 画像の横幅
+                    "sizeh": imgBaseSizeH,          // 画像の縦幅
+                });
+            }
+        }
+        //setImagesでランダムに画像を25個初期表示
+        // 描画、パラメーターの更新
+        var idx = 0;
+        function flow() {
+            ctx.clearRect(0, 0, cvsw, cvsh); //canvas範囲をクリアする
+            for (idx = 0; idx < imgCnt; idx++) {
+                aryImg[idx].posy += 1;//flowが呼ばれる度にy座標の位置が+1される
+                ctx.drawImage(img, aryImg[idx].posx, aryImg[idx].posy, aryImg[idx].sizew, aryImg[idx].sizeh);
+                // 範囲外に描画された画像を上に戻す
+                if (aryImg[idx].posy >= cvsh) {//画像がキャンパスサイズを超えたら
+                    aryImg[idx].posy = -aryImg[idx].sizeh;//画像の立幅分戻します
+                }
+            }
+        }
+
+        function flow_start() {
+            setImagas();
+            setInterval(flow, 10);
+        }
+    </script>
+
+    <meta http-equiv="refresh" content=" 3; url=./profile2.html">
+    <main><p>Loading...</p></main>
+</body>
+</html> 

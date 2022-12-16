@@ -1,0 +1,269 @@
+﻿header {
+    width: 100%;
+    height: 320px;
+    background: url(../img/header.png); /*urlの背景画像にする*/
+    background-size: cover; /*背景画像が全体を覆うようにする*/
+    background-position: center; /*画像の中心が真ん中にくる*/
+}
+
+body {
+    background-color: #f5f5e4ff;
+    margin:0px;/*ヘッダーの隙間をなくす*/
+}
+.under_delete {
+    text-decoration: none; /*リンクの下線を消す*/
+    color: inherit;/*リンクの色を変えない*/
+}
+
+
+.head_container {
+    padding: 10px;
+    display: flex; /*直下の要素が並列になるとかいう便利スタイル*/
+    justify-content: space-between; /*アイテムの間にスペースを均等に割り付け*/
+}
+
+h1{
+    font-size:18px;
+}
+
+header ul{/*headerの中のul要素*/
+    list-style-type: none; /*リストマーカーを消す*/
+}
+
+header ul li{
+    display:inline-block;/*リストを横並びにする*/
+}
+
+header h2{
+    text-align:center;/*中央揃え*/
+    margin-top:120px;
+}
+
+.underline_boid {
+    background: linear-gradient(transparent 60%, #ff6 60%); /*マーカー*/
+    font-weight:600;
+}
+
+.underline_red {
+    background: linear-gradient(transparent 60%, #f08cff 60%); /*マーカー*/
+    font-weight: 600;
+}
+
+nav ul{
+    list-style-type:none;
+    text-align:center;
+}
+nav li{
+    display:inline-block;/*中央に横並びリストにする*/
+    width:150px;
+    text-align:center;
+    border-left:1px dotted black;/*点線の仕切りを作成*/
+}
+
+.last_li{
+    border-right: 1px dotted black; /*右側の点線の仕切りを作成*/
+}
+
+
+.container{
+    width:800px;
+    margin:0px auto;
+    display:flex;
+}
+
+.item01{
+    width:70%/*containerの中の70%*/
+}
+
+.item01　h2{
+    text-align:center;/*中央に*/
+    border-bottom:1px solid navy;/**/
+}
+
+.item01 img{
+    width:99%/*親要素に対して*/
+}
+
+
+.item02 {
+    width: 33%;
+    padding-left:120px;/*写真とサイトメニューの幅*/
+}
+
+.item02 h2{
+    font-size:18px;
+    text-align: center;
+}
+
+.item02 ul {
+        list-style-type:none;
+        padding-left:0px;/*リストの・の余白消す*/
+    }
+.item02 li{
+    border-bottom: 1px dotted black;
+}
+
+.article_container {
+    display: flex; /*直下の要素が並列になるとかいう便利スタイル*/
+}
+
+.article_item{
+    width:47%;
+}
+
+.article_item img{
+    width: 99%;
+}
+
+.article_item p{
+    text-align:center;
+}
+
+footer {
+    width: 100%;
+    background-color: #f4cfc88f;
+    margin: 0px;
+    padding: 30px 0px;
+}
+
+footer h2{
+    text-align:center;
+    font-size:18px;
+}
+
+.slider {
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.slider img {
+        width: 100%;
+        cursor: pointer;
+        transition-duration: 0.3s;
+}
+
+.slider:hover img {
+    opacity: 0.6;
+    transition-duration: 0.3s;
+}
+
+.recipebox{
+    padding: 1em 1em;
+    margin: 2em 0;
+    color: #232323;
+    background: #fff8e8;
+    border-left: solid 10px #ffc06e;
+}
+
+.recipebox h3{
+        margin: 0;
+        padding: 0;
+}
+
+.ingredientbox{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    border: double 5px #ffc06e;
+}
+
+    .ingredientbox ul {
+        margin: 2px; 
+        padding: 0;
+}
+.ingredientbox li {
+        margin: 8px;
+        padding: 0;
+        list-style:none;/*左側の・を削除*/
+}
+
+.ingredientbox li:before {
+        content: "●";
+        color:black; /*左側に色ありの・を追加*/
+    }
+
+.profilebox {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    border: double 5px #ffc06e;
+}
+
+.profilebox ul {
+    margin: 2px;
+    padding: 0;
+}
+
+
+.profilebox li {
+        margin: 8px;
+        padding: 0;
+        
+        font-size:small;
+    }
+
+.pointbox {
+    position: relative;
+    margin: 2em 0;
+    padding: 0.5em 1em;
+    border: solid 3px #95ccff;
+    border-radius: 8px;
+}
+
+    .pointbox .box-title {
+        position: absolute;
+        display: inline-block;
+        top: -13px;
+        left: 10px;
+        padding: 0 9px;
+        line-height: 1;
+        font-size: 19px;
+        background: #f5f5e4ff;/*背景色変更時にはここも変える事*/
+        font-weight: bold;
+    }
+
+    .pointbox p {
+        margin: 0;
+        padding: 0;
+    }
+
+  .photosize{
+      width:473px;
+      height:213px;
+  }
+
+
+
+.mokujibox {
+    margin: 2em 0;
+    background: #fff8e8;
+}
+
+    .mokujibox img {
+        width: 30px;
+        height: 30px;
+    }
+
+
+    .mokujibox .box-title {
+        font-size: 1.2em;
+        color: #232323;
+        background: #ffc06e;
+        padding: 4px;
+        text-align: center;
+        font-weight: bold;
+        letter-spacing: 0.05em;
+    }
+
+    .mokujibox p {
+        padding: 20px 20px;
+        margin: 0;
+    }
+
+    .mokujibox li {
+        list-style: none; /*左側の・を削除*/
+        margin-left: -10px;
+    }
+    .left{
+        text-align:left;
+    }
+
+

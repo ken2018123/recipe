@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lamg="ja">
+<head>
+    <meta charaset="utf-8">
+    <title>自炊大学生の料理レシピ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--bxSliderというスライドショーを挿入するためのコード-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slider').bxSlider({
+                touchEnabled: false,
+
+            });
+        });
+    </script>
+    <!--ここまで-->
+</head>
+    <body>
+        <header>
+            <!--ホームページのヘッダー部分を作成-->
+            <div class="head_container">
+                <div class="head_item">
+                    <h1><a href="index.html" class="under_delete">自炊大学生の料理レシピ</a></h1>
+                </div>
+                
+            </div>
+            <h2>大学生が本気でオススメする料理レシピ</h2>
+
+        </header>
+        <nav>
+            <!--ナビゲーション部分を作成-->
+            <ul>
+                <li><a href="honkakurecipe.html"class="under_delete">本格レシピ</a></li>
+                <li><a href="easyrecipe.html"class="under_delete">簡単レシピ</a></li>
+                <li><a href="sweat.html"class="under_delete">スイーツレシピ</a></li>
+                <li><a href="recomend.html"class="under_delete">おすすめ料理人</a></li>
+               
+                <li><a href="recomend_tool.html"class="under_delete">おすすめ調理器具</a></li>
+                <li class="last_li"><a href="profile.html"class="under_delete">プロフィール</a></li>
+            </ul>
+
+        </nav>
+        <div class="container">
+            <div class="item01">
+                <main>
+                    <h2>自炊大学生の料理レシピ</h2>
+                    <img src="img/0029.png">
+                    <p>
+                        どうもー！自炊大学生のほうれん草(仮名)です。<br />
+                        <br />
+                        今回Webサイト制作の課題があるということで<br />
+                        何のネタにするか迷ったんだけど...<br /><br />
+
+                        <span class="underline_boid">大学生活３年かけて厳選した料理レシピ</span><br /><br />
+                        をブログ風に紹介していこうと思いますノ<br /><br />
+                        料理にはかなーり自信があるので是非参考にしてね！<br />
+                    </p>
+
+                </main>
+                <article>
+                    <!--articleはmainタグを補強する内容-->
+                    <h2>メニュー選択</h2>
+                    <!--後から消しました
+            <div class="article_container">
+                <div class="article_item">
+                    <img src="img/0003.jpg" />
+                    <p>
+                        写真説明1
+                    </p>
+                </div>
+                <div class="article_item">
+                    <img src="img/0004.jpg" />
+                    <p>
+                        写真説明2
+                    </p>
+                </div>
+            </div>
+    -->
+                    <div class="slider">
+                        <div><a href="honkakurecipe.html"><img src="img/slideice.png" /></a></div>
+                        <div><a href="reisyaburecipe.html"><img src="img/slidereisybu.png" /></a></div>
+                        <div><a href="sweat.html"><img src="img/slidecheasecake.png" /></a></div>
+                        <div><a href="easyrecipe.html"><img src="img/slidechicken.png" /></a></div>
+                        <div><a href="recomend.html"><img src="img/slidecook.png" /></a></div>
+                        <div><a href="recomend_tool.html"><img src="img/slidetool.png" /></a></div>
+                    </div>
+                </article>
+            </div>
+            <div class="item02">
+                <aside>
+                    <!--mainにあまり関係ないものはaside使う-->
+                    <h2>サイトおすすめメニュー</h2>
+                    <ul>
+                        <li>本格レシピ</li>
+                        <li><a href="honkakurecipe.html" class="under_delete">キャラメルアイス</a></li>
+                        <li><a href="reisyaburecipe.html" class="under_delete">冷しゃぶ</a></li>
+                        <li>簡単レシピ</li>
+                        <li><a href="easyrecipe.html" class="under_delete">しっとりサラダチキン</a></li>
+                        <li>スイーツレシピ</li>
+                        <li><a href="sweat.html" class="under_delete">半熟チーズケーキ</a></li>
+                        <li><a href="profile.html" class="under_delete">プロフィール</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+        <footer>
+            <!--フッター部分-->
+            <h2>
+                自炊大学生の料理レシピ
+            </h2>
+        </footer>
+    </body>
+</html> 
